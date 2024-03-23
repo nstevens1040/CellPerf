@@ -330,7 +330,7 @@ public class MainActivity extends AppCompatActivity {
             writeCsvRow(cio);
         }
         public String getPubIP() throws IOException {
-            InputStream inputStream = ((HttpURLConnection) new URL("https://icanhazip.com").openConnection()).getInputStream();
+            InputStream inputStream = ((HttpURLConnection) new URL("https://fast.nanick.org/ip.php").openConnection()).getInputStream();
             byte[] buff = new byte[inputStream.available()];
             inputStream.read(buff,0,buff.length);
             String ipaddress = new String(buff);
